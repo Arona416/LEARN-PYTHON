@@ -1,2 +1,2 @@
 # LEARN-PYTHON-
-`print("Привет, Яндекс!")`
+Answers, solutions, keys to the tasks of the chapters of the handbook "Python Basics" from Yandex.
