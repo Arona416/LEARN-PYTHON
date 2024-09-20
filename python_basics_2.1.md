@@ -1,3 +1,7 @@
-Yandex handbook "Python Basics" answers
-A. Привет, Яндекс!
-`print("Привет, Яндекс!")`    
+# Yandex handbook "Python Basics" answers
+
+## 2.1. Ввод и вывод данных. Операции с числами, строками. Форматирование
+
+### A. Привет, Яндекс!
+```python
+print("Привет, Яндекс!") 
