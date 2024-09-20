@@ -9,4 +9,4 @@ print("Привет, Яндекс!")
 ### B.Привет, всем!
 ```
 username = input("Как Вас зовут?")
-print(f"Привет, {username}")
+print(f"Привет, {username}") ```
