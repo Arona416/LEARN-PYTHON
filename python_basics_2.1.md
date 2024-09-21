@@ -93,6 +93,64 @@ num1, num2 = input()[::-1], input()[::-1]
 # Calcul et affichage du résultat
 print(''.join(str((int(a) + int(b)) % 10) for a, b in zip(num1.ljust(3, '0'), num2.ljust(3, '0')))[::-1])
 ```
+### M.Дед Мороз и конфеты
+```
+# Lecture des deux nombres
+num1, num2 = input()[::-1], input()[::-1]
+
+# Calcul et affichage du résultat
+print(''.join(str((int(a) + int(b)) % 10) for a, b in zip(num1.ljust(3, '0'), num2.ljust(3, '0')))[::-1])
+# Lecture des deux nombres
+num1, num2 = input()[::-1], input()[::-1]
+
+# Calcul et affichage du résultat
+print(''.join(str((int(a) + int(b)) % 10) for a, b in zip(num1.ljust(3, '0'), num2.ljust(3, '0')))[::-1])
+
+```
+### N.Шарики и ручки
+```
+num_enfant = int(input())
+num_konf = int(input())
+nb_dis = str(num_konf // num_enfant)
+rest = num_konf % num_enfant
+print(nb_dis)
+print(rest)
+```
+### O.В ожидании доставки
+```
+red = int(input())
+green = int(input())
+blue = int(input())
+print(red + blue + 1)
+
+```
+### P.Доставка
+```
+time_1 = int(input())
+time_2 = int(input())
+time_f = int(input())
+minute = str((time_2 + time_f) % 60)
+hours = str((time_1 + (time_2 + time_f) // 60) % 24)
+print(f'{hours.rjust(2, "0")}:{minute.rjust(2, "0")}')
+
+```
+### Q.Ошибка кассового аппарата
+```
+distance1 = int(input())
+distance_2 = int(input())
+vitesse = int(input())
+time_exact = abs(distance1 - distance_2) / vitesse
+print(f"{time_exact:.2f}")
+```
+### R.Сдача 10
+```
+somme_dec = int(input())
+somme_bin = input()
+convert = int(somme_bin, 2)
+print(somme_dec + convert)
+```
+
+
 
 
 
