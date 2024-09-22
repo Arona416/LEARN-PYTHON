@@ -149,6 +149,30 @@ somme_bin = input()
 convert = int(somme_bin, 2)
 print(somme_dec + convert)
 ```
+### S.Украшение чека
+```
+name_pro, price, weight, my_wallet = input(), int(input()), int(input()), int(input())
+liste = ["Товар:", "Цена:", "Итого:", "Внесено:", "Сдача:"]
+values = [
+    name_pro,
+    f'{weight}кг * {price}руб/кг',
+    f'{price * weight}руб',
+    f'{my_wallet}руб',
+    f'{my_wallet - price * weight}руб'
+]
+print('Чек'.center(35, "="))
+for i in range(len(liste)):
+    print(f"{liste[i]:<15}{values[i]:>20}")
+print('=' * 35)
+```
+### T.Мухи отдельно, котлеты отдельно
+```
+weight, price, price_1, price_2 = int(input()), int(input()), int(input()), int(input())
+weight_1 = int((price - price_2) * weight / (price_1 - price_2))
+weight_2 = weight - weight_1
+print(weight_1, weight_2)
+```
+
 
 
 
