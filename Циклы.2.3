@@ -1,1 +1,67 @@
+###A.Раз, два, три! Ёлочка, гори!
+```
+while (cry := input()) != "Три!":
+    print("Режим ожидания...")
+print("Ёлочка, гори!")
+```
+### B.Зайка — 3
+```
+ctp = 0
+while (x := input()) != 'Приехали!':
+    if 'зайка' in x:
+        ctp += 1
+print(ctp)
+```
+### C.Считалочка
+```
+num1, num2 = int(input()), int(input())
+for i in range(num1, num2 + 1):
+    print(i, end=" ")
 
+```
+### D.Считалочка 2.0
+```
+num1 = int(input()) 
+num2 = int(input())  
+
+# Si num1 est inférieur ou égal à num2, on affiche dans l'ordre croissant
+if num1 <= num2:
+    for i in range(num1, num2 + 1):
+        print(i, end=" ")
+
+# Sinon, on affiche dans l'ordre décroissant
+else:
+    for i in range(num1, num2 - 1, -1):
+        print(i, end=" ")
+
+```
+### E.Внимание! Акция!
+```
+num1 = int(input())  
+num2 = int(input()) 
+
+# Si num1 est inférieur ou égal à num2, on affiche dans l'ordre croissant
+if num1 <= num2:
+    for i in range(num1, num2 + 1):
+        print(i, end=" ")
+
+# Sinon, on affiche dans l'ordre décroissant
+else:
+    for i in range(num1, num2 - 1, -1):
+        print(i, end=" ")
+
+```
+### F.НОД
+```
+cpt = 0
+while (price := input()) != '0':  # On compare avec '0' (chaîne de caractères)
+    price = float(price)  # Convertir en float
+    if price >= 500:
+        cpt += 0.9 * price  # Appliquer la réduction de 10%
+    else:
+        cpt += price  # Ajouter le prix sans réduction
+
+# Afficher la somme totale après la boucle
+print(cpt)
+
+```
