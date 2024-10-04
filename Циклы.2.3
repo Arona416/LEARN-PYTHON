@@ -65,3 +65,78 @@ while (price := input()) != '0':  # On compare avec '0' (chaîne de caractères)
 print(cpt)
 
 ```
+### G.НОК
+```
+def pgcd(a, b):
+    while b != 0:
+        reste = a % b
+        a = b
+        b = reste
+    return a
+
+
+num1 = int(input())
+num2 = int(input())
+
+# Calcul du PPCM
+ppcm = abs(num1 * num2) // pgcd(num1, num2)
+
+# Afficher le PPCM
+print(ppcm)
+
+```
+### H.Излишняя автоматизация 2.0
+```
+syntax_cal = input()
+rep_nb = int(input())
+for _ in range(rep_nb):
+    print(syntax_cal)
+```
+### I.Факториал
+```
+num = int(input())
+fac = 1
+for i in range(1, num + 1):
+    fac *= i
+print(fac)
+
+```
+### J.Маршрут построен
+```
+x, y = 0, 0
+while (direction := input()) != 'СТОП':
+    n = int(input())
+    if direction == 'ВОСТОК':
+        x += n
+    elif direction == 'ЗАПАД':
+        x -= n
+    elif direction == 'СЕВЕР':
+        y += n
+    elif direction == 'ЮГ':
+        y -= n
+print(y, x, sep='\n')
+```
+### K.Цифровая сумма
+```
+import math
+number = list(map(int, input()))
+for num in number:
+    som = sum(number)
+print(som)
+
+```
+### L.Сильная цифра
+```
+import math
+number = list(map(int, input()))
+for num in number:
+    maximum = max(number)
+print(maximum)
+```
+### M.Первому игроку приготовиться 2.0
+```
+n, first = int(input()), input()
+for _ in range(n - 1):
+    first = min(first, input())
+print(first)
+```
