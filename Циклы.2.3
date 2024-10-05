@@ -140,3 +140,116 @@ for _ in range(n - 1):
     first = min(first, input())
 print(first)
 ```
+### N.Простая задача
+```
+nb = int(input())
+if nb < 2:
+    resultat = "NO"
+else:
+    for i in range(2, int(nb ** 0.5) + 1):
+        if nb % i == 0:
+            resultat = "NO"
+            break
+        else:
+            resultat = "YES"
+print(resultat)
+```
+### O.rep = 0
+for _ in range(int(input())):
+    if "зайка" in input():
+        rep += 1
+print(rep)
+```
+rep = 0
+for _ in range(int(input())):
+    if "зайка" in input():
+        rep += 1
+print(rep)
+```
+### P.А роза упала на лапу Азора 2.0
+```
+print("YES") if (x := input()) == x[::-1] else print("NO")
+
+```
+### Q.Чётная чистота
+```
+def est_impair(x):
+    return int(x) % 2 != 0
+
+
+print(''.join(filter(est_impair, input())))
+```
+### R.Простая задача 2.0
+```
+def factorize_prime(n):
+    # Si le nombre est inférieur à 2, on retourne directement ce nombre
+    if n < 2:
+        return str(n)
+
+    factors = []  # Liste pour stocker les facteurs premiers
+    divisor = 2  # Premier diviseur à tester (commençant par 2)
+
+    # Boucle jusqu'à ce que n devienne 1
+    while n > 1:
+        if n % divisor == 0:  # Si divisor est un facteur de n
+            factors.append(str(divisor))  # Ajouter le facteur à la liste
+            n //= divisor  # Diviser n par le facteur trouvé
+        else:
+            divisor += 1  # Passer au diviseur suivant si divisor ne divise pas n
+
+    return ' * '.join(factors)  # Retourner la liste des facteurs sous forme de produit
+
+
+# Entrée utilisateur et affichage du résultat
+n = int(input())
+print(factorize_prime(n))
+
+```
+### S.Игра в «Угадайку»
+```
+begin, end = 1, 1001
+print((begin + end) // 2)
+while (x := input()) != 'Угадал!':
+    if x == 'Меньше':
+        end = (begin + end) // 2
+        print((begin + end) // 2)
+    elif x == 'Больше':
+        begin = (begin + end) // 2
+        print((begin + end) // 2)
+print('=' * 35)
+```
+### T.Хайпанём немножечко!
+```
+# Initialiser la variable pour stocker l'indice du premier échec et une valeur pour l'itération précédente
+indice_echec = -1
+dernier_h = 0
+
+# Demander à l'utilisateur combien de nombres il va entrer
+nombre_nombres = int(input())
+
+# Boucle pour chaque nombre donné par l'utilisateur
+for i in range(nombre_nombres):
+    # Lire le nombre entier entré par l'utilisateur
+    nombre = int(input())
+
+    # Décomposer le nombre en trois parties
+    h = nombre % 256  # Dernier octet
+    r = (nombre // 256) % 256  # Deuxième octet
+    m = nombre // (256 ** 2)  # Premier octet
+
+    # Calculer une valeur t en utilisant m, r et la valeur de dernier_h
+    t = ((m + r + dernier_h) * 37) % 256
+
+    # Vérifier si t est différent de h ou si h est supérieur à 99
+    if t != h or h > 99:
+        # Si la condition est vraie, on enregistre l'indice de l'échec et on sort de la boucle
+        indice_echec = i
+        break
+
+    # Mettre à jour dernier_h avec la valeur de h actuelle pour la prochaine itération
+    dernier_h = h
+
+# Afficher l'indice du premier échec, ou -1 si tous les nombres étaient valides
+print(indice_echec)
+```
+
