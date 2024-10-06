@@ -87,7 +87,7 @@ print(k)
 ```
 ### L.Интересное сложение
 ```
-# Lecture des deux nombres
+## Lecture des deux nombres
 num1, num2 = input()[::-1], input()[::-1]
 
 # Calcul et affichage du résultat
