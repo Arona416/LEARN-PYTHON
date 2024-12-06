@@ -1,1 +1,23 @@
-
+### A.Генератор списков
+```
+def make_list(length, value=0):
+    return [value] * length   
+```
+### B.Генератор матриц
+```
+def make_matrix(size, value=0):
+    if isinstance(size, int):
+        return [[value for i in range(size)] for j in range(size)]
+    else:
+        return [[value for i in range(size[0])] for j in range(size[1])]
+```
+### C.Функциональный нод 2.0
+```
+def gcd(*args):
+    a = list(args)
+    while len(a) > 1:
+        while a[1]:
+            a[0], a[1] = a[1], a[0] % a[1]
+        a.pop(1)
+    return a[0]
+```
