@@ -21,3 +21,22 @@ def gcd(*args):
         a.pop(1)
     return a[0]
 ```
+### D.Имя of the month 2.0
+```
+def month(number, language='ru'):
+    MONTH = {
+        'en': [
+            'January', 'February', 'March',
+            'April', 'May', 'June',
+            'July', 'August', 'September',
+            'October', 'November', 'December'
+        ],
+        'ru': [
+            'Январь', 'Февраль', 'Март',
+            'Апрель', 'Май', 'Июнь',
+            'Июль', 'Август', 'Сентябрь',
+            'Октябрь', 'Ноябрь', 'Декабрь'
+        ]
+    }
+    return MONTH[language][number - 1]
+```
