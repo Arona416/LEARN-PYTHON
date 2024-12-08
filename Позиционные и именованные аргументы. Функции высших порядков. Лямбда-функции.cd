@@ -40,3 +40,8 @@ def month(number, language='ru'):
     }
     return MONTH[language][number - 1]
 ```
+### E.Подготовка данных
+```
+def to_string(*args, **kwargs):
+    return kwargs.get("sep", " ").join([str(i) for i in args]) + kwargs.get("end", "\n")
+```
