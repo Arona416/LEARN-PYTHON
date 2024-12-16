@@ -91,4 +91,13 @@ def get_sum():
 def get_average():
     return round(2 * get_sum()[0] / len(numbers), 2), round(2 * get_sum()[1] / len(numbers), 2)
 ```
+### H.Длинная сортировка
+```
+lambda x: (len(x), x.lower())
+```
+### I.Чётная фильтрация
+```
+lambda x: not sum(map(int, str(x))) % 2
+
+````
 
